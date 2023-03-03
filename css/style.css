@@ -25,6 +25,23 @@ body{
     padding: 2px;
 }
 
+
+.square81 {
+    width: calc(100% / 9);
+    height: calc(100% / 11);
+    border: solid 2px #7e89ff;
+    padding: 2px;
+}
+
+
+
+.square49 {
+    width: calc(100% /7);
+    height: calc(100% / 11);
+    border: solid 2px #7e89ff;
+    padding: 2px;
+}
+
 .square.clicked {
     background-color: indianred;
 }

@@ -3,12 +3,6 @@ const btnDom = document.getElementById('action-button')
 let play = 0;
 let grid=0;
 
-/*
-const Selectionnumber = document.getElementById('selezione-difficolta')
-let selectionvalue = Selectionnumber.value;
-
-if(selectionvalue)
-*/
 btnDom.addEventListener('click', function(){
     
     if(grid<1){
@@ -17,11 +11,14 @@ btnDom.addEventListener('click', function(){
         
             quadratocorrente.addEventListener('click', function() {
             this.classList.toggle('clicked');
-            
+            console.log(quadratocorrente.innerHTML);
+           
         });
 
         gridDom.append(quadratocorrente);
         quadratocorrente.append(i);
+            
+
      }
     }else{
         console.log('grliglia già generata')
