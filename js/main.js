@@ -1,8 +1,12 @@
 const gridDom = document.getElementById('grid');
 const btnDom = document.getElementById('action-button')
 let play = 0;
+/*
+const Selectionnumber = document.getElementById('selezione-difficolta')
+let selectionvalue = Selectionnumber.value;
 
-
+if(selectionvalue)
+*/
 btnDom.addEventListener('click', function(){
     for(i=0; i < 100; i++){
         const quadratocorrente = creanuovoquadrato();
@@ -15,17 +19,10 @@ btnDom.addEventListener('click', function(){
         gridDom.append(quadratocorrente);
         quadratocorrente.append(i);
      }
-
 });
     
 
     
-       
-    
-       
-     
-    
-
 function creanuovoquadrato(){
     const currentElement = document.createElement('div');
     currentElement.classList.add('square');
