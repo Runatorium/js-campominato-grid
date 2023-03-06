@@ -1,11 +1,24 @@
 const gridDom = document.getElementById('grid');
 const btnDom = document.getElementById('action-button')
-let play = 0;
-let grid=0;
 
 btnDom.addEventListener('click', function(){
     
-    if(grid<1){
+    gridDom.innerHTML = "";
+    
+    creagriglia();
+   
+});
+    
+
+    
+function creanuovoquadrato(){
+    const currentElement = document.createElement('div');
+    currentElement.classList.add('square');
+    return currentElement;
+}
+
+
+function creagriglia (){
     for(i=0; i < 100; i++){
         const quadratocorrente = creanuovoquadrato();
         
@@ -18,18 +31,5 @@ btnDom.addEventListener('click', function(){
         gridDom.append(quadratocorrente);
         quadratocorrente.append(i);
             
-
      }
-    }else{
-        console.log('grliglia già generata')
-    }
-    grid++
-});
-    
-
-    
-function creanuovoquadrato(){
-    const currentElement = document.createElement('div');
-    currentElement.classList.add('square');
-    return currentElement;
-}
+}; 
