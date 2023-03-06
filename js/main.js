@@ -2,10 +2,31 @@ const gridDom = document.getElementById('grid');
 const btnDom = document.getElementById('action-button')
 
 btnDom.addEventListener('click', function(){
+
+    const difficoltà = document.getElementById('selezione-difficolta');
+    const dfc = difficoltà.value;
+    var nsquare;
+
+    switch(dfc){
+        case 'easy':
+        var nsquare = 100;
+        break;
+        
+        case 'hard':
+        var nsquare = 81;
+        break;
+
+        case 'insane':
+        var nsquare = 49;
+        break;
+
+    }
+         
+    console.log(nsquare);
+    
     
     gridDom.innerHTML = "";
-    
-    creagriglia();
+    creagriglia(nsquare);
    
 });
     
@@ -18,8 +39,8 @@ function creanuovoquadrato(){
 }
 
 
-function creagriglia (){
-    for(i=0; i < 100; i++){
+function creagriglia (nsquare){
+    for(i=0; i < nsquare; i++){
         const quadratocorrente = creanuovoquadrato();
         
             quadratocorrente.addEventListener('click', function() {
